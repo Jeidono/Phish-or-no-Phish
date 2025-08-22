@@ -140,7 +140,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Location: \nnum Street ave,\nSuburb,\nCountry\n"
+  m_text: 'Location:
+
+    100 Appletree Avenue,
+
+    Sundam,
+
+    Desertia'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -276,7 +282,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Age: 18'
+  m_text: 'Age: 20'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -539,7 +545,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 20}
+  m_SizeDelta: {x: 50, y: 10}
   m_Pivot: {x: 0, y: 1}
 --- !u!223 &346877238929753459
 Canvas:
@@ -669,7 +675,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MyName
+  m_text: Periko
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -786,13 +792,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profilePic: {fileID: 0}
-  clientName: 
-  age: 0
+  clientName: Periko
+  age: 20
   email:
     username: 
     domainName: 
   location:
-    HouseNum: 0
-    StreetName: 
-    Suburb: 
-    Country: 
+    HouseNum: 100
+    StreetName: Appletree Avenue
+    Suburb: Sundam
+    Country: Desertia
+  Content: {fileID: 0}
+  Pic: {fileID: 1003537697011942243}
+  Name: {fileID: 6713809390757705477}
+  Age: {fileID: 8344027726990648344}
+  Location: {fileID: 5560700069449643652}
+  ContentHolder: {fileID: 6383136448022007925}
