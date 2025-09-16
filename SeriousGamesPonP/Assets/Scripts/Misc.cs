@@ -5,7 +5,6 @@ public struct Location
 {
     public int HouseNum;
     public string StreetName;
-    public string Suburb;
     public string Country;
 }
 [Serializable]

@@ -51,8 +51,7 @@ public class ClientRequest : MonoBehaviour
 
         if (Location)
         {
-            Location.text = "Location:\n" + location.HouseNum + " " + location.StreetName + ",\n" + location.Suburb +
-                            ",\n" + location.Country;
+            Location.text = "Location:\n" + location.HouseNum + " " + location.StreetName + ",\n" + location.Country;
         }
 
         if (ContentHolder && Content)
