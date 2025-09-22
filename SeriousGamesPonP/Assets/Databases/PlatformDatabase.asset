@@ -21,3 +21,13 @@ MonoBehaviour:
   - BookFace
   - WeScreen
   - SilliMilli
+  DomainName:
+  - knockoff
+  - spooky
+  - dreidle
+  - okt
+  - uncta
+  - bf
+  - wescreen
+  - silli
+  PlatformIcon: []

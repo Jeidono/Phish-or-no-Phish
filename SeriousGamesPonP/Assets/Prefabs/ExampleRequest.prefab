@@ -144,9 +144,7 @@ MonoBehaviour:
 
     100 Appletree Avenue,
 
-    Sundam,
-
-    Desertia'
+    0, Desertia'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -546,7 +544,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 50, y: 10}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!223 &346877238929753459
 Canvas:
   m_ObjectHideFlags: 0
@@ -773,7 +771,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3977918365291092844}
@@ -800,7 +798,7 @@ MonoBehaviour:
   location:
     HouseNum: 100
     StreetName: Appletree Avenue
-    Suburb: Sundam
+    PostCode: 0
     Country: Desertia
   Content: {fileID: 0}
   Pic: {fileID: 1003537697011942243}
