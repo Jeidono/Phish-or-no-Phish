@@ -38,20 +38,20 @@ public class RequestSpawner : MonoBehaviour
             CRthingy.location = new Location(Random.Range(1, LB.maxStreetNumbers[Random.Range(0, LB.maxStreetNumbers.Count)]),
                 LB.StreetNames[Random.Range(0, LB.StreetNames.Count)] + " " + LB.StreetTypes[Random.Range(0, LB.StreetTypes.Count)],
                 countryLoc * LB.postCodeGap + Random.Range(0, LB.postCodeGap), LB.Countries[countryLoc]);
-            yield return positionMoving(RQthingy);
+            StartCoroutine(positionMoving(RQthingy));
             yield return new WaitForSeconds(0.1f);
         }
     }
 
     private IEnumerator positionMoving(GameObject Requests)
     {
+        Vector3 startLoc=spawnLoc;
+        float aspect = (float)Screen.width / Screen.height;
+        float worldHeight = FindAnyObjectByType<Camera>().orthographicSize * 2;
+        float worldWidth = worldHeight * aspect;
+        Vector3 endLoc=new Vector3(Random.Range(-worldWidth/2,worldWidth/2),Random.Range(-worldHeight/2,worldHeight/2));
         for (float i = 0; i < 0.25f; i += Time.deltaTime)
         {
-            Vector3 startLoc=spawnLoc;
-            float aspect = (float)Screen.width / Screen.height;
-            float worldHeight = FindAnyObjectByType<Camera>().orthographicSize * 2;
-            float worldWidth = worldHeight * aspect;
-            Vector3 endLoc=new Vector3(Random.Range(-worldWidth/2,worldWidth/2),Random.Range(-worldHeight/2,worldHeight/2));
             Requests.transform.position = Vector3.Lerp(startLoc,endLoc,i/0.25f);
             yield return null;
         }
