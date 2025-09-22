@@ -12,6 +12,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9184aae795d506d4a916abd52411a6f1, type: 3}
   m_Name: Content Database
   m_EditorClassIdentifier: 
-  audioItems: []
-  emails: []
-  textMessages: []
+  audioItems:
+  - clip: {fileID: 0}
+    description: 
+    duration: 0
+    isPhishing: 0
+  - clip: {fileID: 0}
+    description: 
+    duration: 0
+    isPhishing: 0
+  - clip: {fileID: 0}
+    description: 
+    duration: 0
+    isPhishing: 0
+  - clip: {fileID: 0}
+    description: 
+    duration: 0
+    isPhishing: 0
+  - clip: {fileID: 0}
+    description: 
+    duration: 0
+    isPhishing: 0
+  emails:
+  - from: 
+    to: 
+    subject: 
+    body: 
+  - from: 
+    to: 
+    subject: 
+    body: 
+  - from: 
+    to: 
+    subject: 
+    body: 
+  - from: 
+    to: 
+    subject: 
+    body: 
+  - from: 
+    to: 
+    subject: 
+    body: 
+  textMessages:
+  - platform: 
+    sender: 
+    receiver: 
+    message: 
+  - platform: 
+    sender: 
+    receiver: 
+    message: 
+  - platform: 
+    sender: 
+    receiver: 
+    message: 
+  - platform: 
+    sender: 
+    receiver: 
+    message: 
+  - platform: 
+    sender: 
+    receiver: 
+    message: 

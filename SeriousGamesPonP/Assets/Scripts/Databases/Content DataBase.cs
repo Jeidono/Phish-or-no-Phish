@@ -8,16 +8,15 @@ public class ContentDatabase : ScriptableObject
     [Serializable]
     public class AudioContent
     {
-        public string id;          
-        public AudioClip clip;       
+        public AudioClip clip;
         public string description;
-        public float duration;     
+        public float duration; 
+        public bool isPhishing;  
     }
 
     [Serializable]
     public class EmailContent
     {
-        public string id;
         public string from;        
         public string to;            
         public string subject;
@@ -29,7 +28,6 @@ public class ContentDatabase : ScriptableObject
     public class TextDMContent
     {
         public string platform;
-        public string id;
         public string sender;
         public string receiver; 
         public string message;        
