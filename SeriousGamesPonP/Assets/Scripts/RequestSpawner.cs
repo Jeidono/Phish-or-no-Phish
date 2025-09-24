@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -49,10 +48,10 @@ public class RequestSpawner : MonoBehaviour
         float aspect = (float)Screen.width / Screen.height;
         float worldHeight = FindAnyObjectByType<Camera>().orthographicSize * 2;
         float worldWidth = worldHeight * aspect;
-        Vector3 endLoc=new Vector3(Random.Range(-worldWidth/2,worldWidth/2),Random.Range(-worldHeight/2,worldHeight/2));
-        for (float i = 0; i < 0.25f; i += Time.deltaTime)
+        Vector3 endLoc=new Vector3(Random.Range(-worldWidth/2,worldWidth/2)/2,Random.Range(-worldHeight/2,worldHeight/2)/2);
+        for (float i = 0; i < 1; i += Time.deltaTime*4)
         {
-            Requests.transform.position = Vector3.Lerp(startLoc,endLoc,i/0.25f);
+            Requests.transform.position = Vector3.Lerp(startLoc,endLoc,i);
             yield return null;
         }
     }
