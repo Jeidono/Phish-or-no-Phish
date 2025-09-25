@@ -232,11 +232,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   database: {fileID: 11400000, guid: a110e9c30b542d644b695b6d6bcf3e25, type: 2}
   useRandom: 1
-  subjectText: {fileID: 0}
-  fromText: {fileID: 0}
-  toText: {fileID: 0}
-  bodyText: {fileID: 0}
-  timestampText: {fileID: 0}
+  subjectText: {fileID: 4747604311971493063}
+  fromText: {fileID: 238117349050489347}
+  toText: {fileID: 2132094160255806564}
+  bodyText: {fileID: 1978320020885802331}
+  timestampText: {fileID: 8007592924231162335}
   Subject: 
   From: 
   To: 
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TimeStamp
+  m_text: 'Date: 1/01/0001 12:00:00 AM'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'From:'
+  m_text: 'From: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -789,7 +789,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Description:'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1000,7 +1000,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Subject:'
+  m_text: 'Subject: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
