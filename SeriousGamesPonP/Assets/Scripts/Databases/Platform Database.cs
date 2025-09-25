@@ -5,5 +5,6 @@ using UnityEngine;
 public class PlatformDatabase : ScriptableObject
 {
     public List<string> PlatformName;
+    public List<string> DomainName;
     public List<Sprite> PlatformIcon;
 }

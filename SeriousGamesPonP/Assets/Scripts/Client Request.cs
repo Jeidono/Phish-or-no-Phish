@@ -1,7 +1,8 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-[ExecuteAlways]
+using UnityEngine.EventSystems;
 public class ClientRequest : MonoBehaviour
 {
     public Sprite profilePic;
@@ -18,8 +19,10 @@ public class ClientRequest : MonoBehaviour
     [SerializeField] private GameObject ContentHolder;
 
     private RectTransform ContCanv;
-
+    private BoxCollider2D BC;
     private RectTransform myCanv;
+
+    private Vector3 mouseOffset;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,8 +30,23 @@ public class ClientRequest : MonoBehaviour
         {
             ContCanv = Content.GetComponentInChildren<Canvas>().GetComponent<RectTransform>();
         }
+        
 
         myCanv = gameObject.GetComponentInChildren<Canvas>().GetComponent<RectTransform>();
+        BC = gameObject.AddComponent<BoxCollider2D>();
+        BC.size = myCanv.rect.size;
+    }
+
+    private void OnMouseDown()
+    {
+        mouseOffset = transform.position -
+                      Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+    }
+
+    private void OnMouseDrag()
+    {
+        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + mouseOffset;
     }
 
     // Update is called once per frame
@@ -51,7 +69,7 @@ public class ClientRequest : MonoBehaviour
 
         if (Location)
         {
-            Location.text = "Location:\n" + location.HouseNum + " " + location.StreetName + ",\n" + location.Country;
+            Location.text = "Location:\n" + location.HouseNum + " " + location.StreetName + ",\n" +location.PostCode+", "+ location.Country;
         }
 
         if (ContentHolder && Content)
@@ -65,5 +83,6 @@ public class ClientRequest : MonoBehaviour
                 myCanv.sizeDelta = new Vector2(50,ContCanv.sizeDelta.y+10);
             }
         }
+        BC.size = myCanv.rect.size;
     }
 }
