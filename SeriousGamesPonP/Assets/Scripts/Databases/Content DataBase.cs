@@ -17,8 +17,6 @@ public class ContentDatabase : ScriptableObject
     [Serializable]
     public class EmailContent
     {
-        public string from;        
-        public string to;            
         public string subject;
         public string body;
         public DateTime timestamp;
@@ -27,9 +25,6 @@ public class ContentDatabase : ScriptableObject
     [Serializable]
     public class TextDMContent
     {
-        public string platform;
-        public string sender;
-        public string receiver; 
         public string message;        
         public DateTime timestamp;
     }

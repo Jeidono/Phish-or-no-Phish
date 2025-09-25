@@ -362,6 +362,7 @@ GameObject:
   - component: {fileID: 2134749019607995684}
   - component: {fileID: 3862226339600415834}
   - component: {fileID: 757166798377266032}
+  - component: {fileID: 8024440131872152911}
   m_Layer: 5
   m_Name: ContentHolder
   m_TagString: Untagged
@@ -426,6 +427,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8024440131872152911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6383136448022007925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d438a163a851d042819c994a2399b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CD: {fileID: 11400000, guid: a110e9c30b542d644b695b6d6bcf3e25, type: 2}
+  PB: {fileID: 11400000, guid: ae551512db4e4ab469be824b862a134a, type: 2}
+  LB: {fileID: 11400000, guid: 936596b7eec16a242b4a2e9cd1ff6f77, type: 2}
+  PLB: {fileID: 11400000, guid: 30c50923a6ddcdc408c2c6f7f74e6184, type: 2}
+  CR: {fileID: 3137315820348003823}
+  CHemail: {fileID: 962917048034306758, guid: 5c33fcf3a67f25b47ba7526b3eda3d4b, type: 3}
+  CHdm: {fileID: 0}
+  CHaudio: {fileID: 0}
 --- !u!1 &6734710844114045373
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,11 +31,6 @@ public class TextDMContentHolder : MonoBehaviour
 
         var message = database.textMessages[idx];
 
-        if (platformText != null)
-            platformText.text = $"Platform: {message.platform}";
-
-        if (senderReceiverText != null)
-            senderReceiverText.text = $"From: {message.sender}\nTo: {message.receiver}";
 
         if (messageText != null)
             messageText.text = message.message;

@@ -13,9 +13,16 @@ public class EmailContentHolder : MonoBehaviour
 
     [Header("UI Elements")]
     [SerializeField] private TMP_Text subjectText;
-    [SerializeField] private TMP_Text fromToText;
+    [SerializeField] private TMP_Text fromText;
+    [SerializeField] private TMP_Text toText;
     [SerializeField] private TMP_Text bodyText;
     [SerializeField] private TMP_Text timestampText;
+
+    public string Subject;
+    public string From;
+    public string To;
+    public string Body;
+    public DateTime Timestamp;
 
     void Update()
     {
@@ -25,29 +32,26 @@ public class EmailContentHolder : MonoBehaviour
             return;
         }
 
-        int idx = useRandom
-            ? UnityEngine.Random.Range(0, database.emails.Count)
-            : 0;
-
-        var email = database.emails[idx];
-
         if (subjectText != null)
-            subjectText.text = $"Subject: {email.subject}";
+            subjectText.text = $"Subject: {Subject}";
 
-        if (fromToText != null)
-            fromToText.text = $"From: {email.from}\nTo: {email.to}";
+        if (fromText != null)
+            fromText.text = $"From: {From}";
+
+        if (toText != null)
+            toText.text = $"To: {To}";
 
         if (bodyText != null)
-            bodyText.text = email.body;
+            bodyText.text = Body;
 
         if (timestampText != null)
-            timestampText.text = $"Date: {email.timestamp.ToString("g")}";
+            timestampText.text = $"Date: {Timestamp}";
     }
 
     private void ClearUI()
     {
         if (subjectText != null) subjectText.text = "";
-        if (fromToText != null) fromToText.text = "";
+    
         if (bodyText != null) bodyText.text = "";
         if (timestampText != null) timestampText.text = "";
     }
