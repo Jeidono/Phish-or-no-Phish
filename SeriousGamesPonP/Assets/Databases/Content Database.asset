@@ -34,44 +34,19 @@ MonoBehaviour:
     duration: 0
     isPhishing: 0
   emails:
-  - from: 
-    to: 
-    subject: 
+  - subject: aaaaaaaaaaaaa
     body: 
-  - from: 
-    to: 
-    subject: 
+  - subject: aaaaaaaaaa
+    body: aaaaaaaaaaa
+  - subject: aaaaaaaa
     body: 
-  - from: 
-    to: 
-    subject: 
+  - subject: aaaaaaaaaa
     body: 
-  - from: 
-    to: 
-    subject: 
-    body: 
-  - from: 
-    to: 
-    subject: 
+  - subject: aaaaaaaaaaaaaaaaaa
     body: 
   textMessages:
-  - platform: 
-    sender: 
-    receiver: 
-    message: 
-  - platform: 
-    sender: 
-    receiver: 
-    message: 
-  - platform: 
-    sender: 
-    receiver: 
-    message: 
-  - platform: 
-    sender: 
-    receiver: 
-    message: 
-  - platform: 
-    sender: 
-    receiver: 
-    message: 
+  - message: 
+  - message: 
+  - message: 
+  - message: 
+  - message: 
