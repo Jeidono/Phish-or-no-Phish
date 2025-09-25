@@ -2,7 +2,6 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
 public class ClientRequest : MonoBehaviour
 {
     public Sprite profilePic;
@@ -39,14 +38,25 @@ public class ClientRequest : MonoBehaviour
 
     private void OnMouseDown()
     {
-        mouseOffset = transform.position -
-                      Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
+        mouseOffset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     private void OnMouseDrag()
     {
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + mouseOffset;
+    }
+
+    private void OnMouseUp()
+    {
+        Collider2D[] gettingFolder = Physics2D.OverlapCircleAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), 1);
+        foreach (Collider2D col in gettingFolder)
+        {
+            if (col.gameObject.GetComponent<FolderHolder>())
+            {
+                col.gameObject.GetComponent<FolderHolder>().LoadAndMoveObject(gameObject);
+                return;
+            }
+        }
     }
 
     // Update is called once per frame
