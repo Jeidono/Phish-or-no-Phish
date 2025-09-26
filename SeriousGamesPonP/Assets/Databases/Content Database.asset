@@ -60,8 +60,16 @@ MonoBehaviour:
       delivery time here: [Reschedule Delivery]. Tracking ID: 9X-12345 Thanks, Customer
       Support"
   textMessages:
-  - message: 
-  - message: 
-  - message: 
-  - message: 
-  - message: 
+  - message: "Hey \u2014 this is IT. We noticed suspicious activity on your account.
+      Click here to verify your identity now: [verify-account.link]. If you don\u2019t
+      verify within 2 hours your account will be locked."
+  - message: 'Hey! Quick reminder: team happy hour tomorrow at 6pm at The Copper
+      Tap. Meet in the lobby at 5:45 if you want to carpool. :)'
+  - message: "Congrats! You\u2019ve been selected for a $500 gift card. Claim it
+      by connecting your wallet here: [claim-gift.io]. Only first 50 people \u2014
+      hurry!"
+  - message: "Hi \u2014 I finished the draft of the Q4 report and uploaded it to
+      our shared folder. Can you review pages 3\u20135 and tell me if the figures
+      look right? Thanks!"
+  - message: "Urgent: I tried to send you a file but it bounced. Can you open this
+      link and confirm your email so I can resend? [open-now.attn] \u2014 Jason"
