@@ -20,13 +20,15 @@ public class ContentDatabase : ScriptableObject
         public string subject;
         public string body;
         public DateTime timestamp;
+        public bool isPhishing;  
     }
 
     [Serializable]
     public class TextDMContent
     {
-        public string message;        
+        public string message;
         public DateTime timestamp;
+        public bool isPhishing;  
     }
 
     // Lists for each type of content
