@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Net;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -28,7 +29,7 @@ public class ContentSpawner : MonoBehaviour
         AssignPersonAndLocation();
 
         int type = Random.Range(1, 3);
-        type = 1;
+        type = 2;
         GameObject contentObj = null;
 
         switch (type)
@@ -50,17 +51,20 @@ public class ContentSpawner : MonoBehaviour
                     int emailIdx = Random.Range(0, CD.emails.Count);
                     ECH.Subject = CD.emails[emailIdx].subject;
                     ECH.Body = CD.emails[emailIdx].body;
-                    ECH.Timestamp = CD.emails[emailIdx].timestamp;
+                    ECH.Timestamp = CD.emails[emailIdx].timestamp; 
 
                 }
                 break;
             case 2: // TextDM
                 if (CD.textMessages.Count > 0)
                 {
-                    contentObj = new GameObject("TextDMContent");
-                    var holder = contentObj.AddComponent<TextDMContentHolder>();
-                    holder.database = CD;
-                    holder.useRandom = true;
+                    contentObj = Instantiate(CHdm, CR.ContentHolder.transform);
+                    TextDMContentHolder DCH = contentObj.GetComponent<TextDMContentHolder>();
+                    int dmIdx = Random.Range(0, CD.textMessages.Count);
+                    DCH.Sender = username;
+                    DCH.Receiver = CR.email.username;
+                    DCH.Message = CD.textMessages[dmIdx].message;
+                    DCH.Timestamp = CD.textMessages[dmIdx].timestamp;
                 }
                 break;
         }

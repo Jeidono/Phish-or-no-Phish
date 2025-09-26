@@ -17,6 +17,12 @@ public class TextDMContentHolder : MonoBehaviour
     [SerializeField] private TMP_Text messageText;
     [SerializeField] private TMP_Text timestampText;
 
+    public string Platform;
+    public string Sender;
+    public string Receiver;
+    public string Message;
+    public DateTime Timestamp;
+
     void Update()
     {
         if (database == null || database.textMessages == null || database.textMessages.Count == 0)
@@ -25,18 +31,17 @@ public class TextDMContentHolder : MonoBehaviour
             return;
         }
 
-        int idx = useRandom
-            ? UnityEngine.Random.Range(0, database.textMessages.Count)
-            : 0;
+        if (platformText != null)
+            platformText.text = $"Platform: {Platform}";
 
-        var message = database.textMessages[idx];
-
+        if (senderReceiverText != null)
+            senderReceiverText.text = $"From: {Sender}\nTo: {Receiver}";
 
         if (messageText != null)
-            messageText.text = message.message;
+            messageText.text = Message;
 
         if (timestampText != null)
-            timestampText.text = $"Date: {message.timestamp.ToString("g")}";
+            timestampText.text = $"Date: {Timestamp}";
     }
 
     private void ClearUI()
