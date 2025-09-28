@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Net;
 using UnityEngine;
@@ -28,8 +29,7 @@ public class ContentSpawner : MonoBehaviour
         if (CR.Content) return;
         AssignPersonAndLocation();
 
-        int type = Random.Range(1, 3);
-        type = 2;
+        int type = Random.Range(1, 3); //0 = audio, 1 = email, 2 = textdm
         GameObject contentObj = null;
 
         switch (type)
