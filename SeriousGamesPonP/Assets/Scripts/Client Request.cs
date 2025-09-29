@@ -2,7 +2,6 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
 public class ClientRequest : MonoBehaviour
 {
     public Sprite profilePic;
@@ -18,10 +17,10 @@ public class ClientRequest : MonoBehaviour
     [SerializeField] private TMP_Text Location;
     [SerializeField] public GameObject ContentHolder;
 
-    private RectTransform ContCanv;
+    public RectTransform ContCanv;
     private BoxCollider2D BC;
     private RectTransform myCanv;
-
+    private bool resize=false;
     private Vector3 mouseOffset;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,9 +38,7 @@ public class ClientRequest : MonoBehaviour
 
     private void OnMouseDown()
     {
-        mouseOffset = transform.position -
-                      Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
+        mouseOffset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     private void OnMouseDrag()
@@ -49,30 +46,23 @@ public class ClientRequest : MonoBehaviour
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + mouseOffset;
     }
 
+    private void OnMouseUp()
+    {
+        Collider2D[] gettingFolder = Physics2D.OverlapCircleAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), 1);
+        foreach (Collider2D col in gettingFolder)
+        {
+            if (col.gameObject.GetComponent<FolderHolder>())
+            {
+                col.gameObject.GetComponent<FolderHolder>().LoadAndMoveObject(gameObject);
+                return;
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Pic&&profilePic)
-        {
-            Pic.sprite = profilePic;
-        }
-
-        if (Name)
-        {
-            Name.text = clientName;
-        }
-
-        if (Age)
-        {
-            Age.text = "Age: " + age;
-        }
-
-        if (Location)
-        {
-            Location.text = "Location:\n" + location.HouseNum + " " + location.StreetName + ",\n" +location.PostCode+", "+ location.Country;
-        }
-
-        if (ContentHolder && Content)
+        if (ContentHolder && Content&&!resize)
         {
             if (ContCanv.sizeDelta.x > 48)
             {
@@ -82,7 +72,30 @@ public class ClientRequest : MonoBehaviour
             {
                 myCanv.sizeDelta = new Vector2(50,ContCanv.sizeDelta.y+10);
             }
+
+            resize = true;
+            BC.size = myCanv.rect.size;
+            if (Pic&&profilePic)
+            {
+                Pic.sprite = profilePic;
+            }
+
+            if (Name)
+            {
+                Name.text = clientName;
+            }
+
+            if (Age)
+            {
+                Age.text = "Age: " + age;
+            }
+
+            if (Location)
+            {
+                Location.text = "Location:\n" + location.HouseNum + " " + location.StreetName + ",\n" +location.PostCode+", "+ location.Country;
+            }
         }
-        BC.size = myCanv.rect.size;
+        
+        
     }
 }
