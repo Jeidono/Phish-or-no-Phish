@@ -15,7 +15,7 @@ public class ClientRequest : MonoBehaviour
     [SerializeField] private TMP_Text Name;
     [SerializeField] private TMP_Text Age;
     [SerializeField] private TMP_Text Location;
-    [SerializeField] private GameObject ContentHolder;
+    [SerializeField] public GameObject ContentHolder;
 
     private RectTransform ContCanv;
     private BoxCollider2D BC;

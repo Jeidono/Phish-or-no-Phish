@@ -34,44 +34,52 @@ MonoBehaviour:
     duration: 0
     isPhishing: 0
   emails:
-  - from: 
-    to: 
-    subject: 
-    body: 
-  - from: 
-    to: 
-    subject: 
-    body: 
-  - from: 
-    to: 
-    subject: 
-    body: 
-  - from: 
-    to: 
-    subject: 
-    body: 
-  - from: 
-    to: 
-    subject: 
-    body: 
+  - subject: Hi
+    body: 'Our payroll system flagged an inconsistency in your account details that
+      will delay your next paycheck unless verified. Please confirm your banking
+      and tax info now to avoid payment interruption: [Verify Payroll Details]. Thank
+      you, Payroll Services'
+    isPhishing: 1
+  - subject: "Team Lunch \u2014 RSVP by Friday"
+    body: "Hi Team, We\u2019re planning a team lunch next Wednesday at 12:30 PM.
+      Please reply to this email with any dietary restrictions and whether you can
+      attend by this Friday so I can finalize the reservation. Looking forward to
+      seeing everyone! \u2014 Alex"
+    isPhishing: 0
+  - subject: 'Security Alert: Unusual Login Attempt Detected'
+    body: 'We detected a login attempt from a new device in a different city. If
+      this was you, ignore this message. If not, immediately secure your account
+      here: [Secure Account Now]. Failure to secure your account within 24 hours
+      will result in temporary suspension. Sincerely, Account Security Team'
+    isPhishing: 1
+  - subject: "Invoice #4521 \u2014 Payment Due October 5"
+    body: 'Hello, Attached is Invoice #4521 for services provided in September. Total
+      due: $2,175.00. Please confirm receipt and let us know if you need any supporting
+      documents. Payment due by October 5; wire instructions are on the invoice.
+      Best regards, Finance Dept.'
+    isPhishing: 0
+  - subject: "Delivery Attempt Failed \u2014 Please Reschedule"
+    body: "Hello, We attempted to deliver a package but couldn\u2019t reach you.
+      To reschedule delivery and avoid return, confirm your address and preferred
+      delivery time here: [Reschedule Delivery]. Tracking ID: 9X-12345 Thanks, Customer
+      Support"
+    isPhishing: 1
   textMessages:
-  - platform: 
-    sender: 
-    receiver: 
-    message: 
-  - platform: 
-    sender: 
-    receiver: 
-    message: 
-  - platform: 
-    sender: 
-    receiver: 
-    message: 
-  - platform: 
-    sender: 
-    receiver: 
-    message: 
-  - platform: 
-    sender: 
-    receiver: 
-    message: 
+  - message: "Hey \u2014 this is IT. We noticed suspicious activity on your account.
+      Click here to verify your identity now: [verify-account.link]. If you don\u2019t
+      verify within 2 hours your account will be locked."
+    isPhishing: 1
+  - message: 'Hey! Quick reminder: team happy hour tomorrow at 6pm at The Copper
+      Tap. Meet in the lobby at 5:45 if you want to carpool. :)'
+    isPhishing: 0
+  - message: "Congrats! You\u2019ve been selected for a $500 gift card. Claim it
+      by connecting your wallet here: [claim-gift.io]. Only first 50 people \u2014
+      hurry!"
+    isPhishing: 1
+  - message: "Hi \u2014 I finished the draft of the Q4 report and uploaded it to
+      our shared folder. Can you review pages 3\u20135 and tell me if the figures
+      look right? Thanks!"
+    isPhishing: 0
+  - message: "Urgent: I tried to send you a file but it bounced. Can you open this
+      link and confirm your email so I can resend? [open-now.attn] \u2014 Jason"
+    isPhishing: 1
