@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 139587724}
   - component: {fileID: 139587723}
   - component: {fileID: 139587727}
+  - component: {fileID: 139587728}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -313,6 +314,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 780eea12c28b62d49bad0bdf3edb7e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &139587728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139587722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7593b0d9939ee0d4c972df434598fff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &521763268
@@ -1078,9 +1091,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 139587727}
-        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: Play
+      - m_Target: {fileID: 139587728}
+        m_TargetAssemblyTypeName: ButtonsScript, Assembly-CSharp
+        m_MethodName: OnApplicationQuit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
