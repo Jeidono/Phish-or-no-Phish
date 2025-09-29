@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Phish.unity
     guid: 6c49a01ab4531e747ab96201becbe87a
+  - enabled: 1
+    path: Assets/Scenes/Levels/Result.unity
+    guid: 0b49cd298cce59f4a9c6cfb6f0ece470
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

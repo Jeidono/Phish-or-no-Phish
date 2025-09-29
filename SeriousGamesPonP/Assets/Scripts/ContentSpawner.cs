@@ -14,7 +14,8 @@ public class ContentSpawner : MonoBehaviour
     [SerializeField] private GameObject CHemail;
     [SerializeField] private GameObject CHdm;
     [SerializeField] private GameObject CHaudio;
-    
+
+    public bool Phishing;
     private string domainName;
     private string username;
 
@@ -29,7 +30,7 @@ public class ContentSpawner : MonoBehaviour
         if (CR.Content) return;
         AssignPersonAndLocation();
 
-        int type = Random.Range(1, 2); //0 = audio, 1 = email, 2 = textdm
+        int type = Random.Range(1, 3); //0 = audio, 1 = email, 2 = textdm
         GameObject contentObj = null;
 
         switch (type)
@@ -51,7 +52,8 @@ public class ContentSpawner : MonoBehaviour
                     int emailIdx = Random.Range(0, CD.emails.Count);
                     ECH.Subject = CD.emails[emailIdx].subject;
                     ECH.Body = CD.emails[emailIdx].body;
-                    ECH.Timestamp = CD.emails[emailIdx].timestamp; 
+                    ECH.Timestamp = CD.emails[emailIdx].timestamp;
+                    Phishing = CD.emails[emailIdx].isPhishing;
 
                 }
                 break;
@@ -65,6 +67,7 @@ public class ContentSpawner : MonoBehaviour
                     DCH.Receiver = CR.email.username;
                     DCH.Message = CD.textMessages[dmIdx].message;
                     DCH.Timestamp = CD.textMessages[dmIdx].timestamp;
+                    Phishing = CD.textMessages[dmIdx].isPhishing;
                 }
                 break;
         }

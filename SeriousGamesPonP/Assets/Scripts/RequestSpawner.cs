@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -11,6 +12,12 @@ public class RequestSpawner : MonoBehaviour
     [SerializeField] private Vector3 spawnLoc;
     [SerializeField] private bool spawn=false;
     [SerializeField] private int Requests = 5;
+
+    private void Start()
+    {
+        spawn = true;
+        Requests = Random.Range(5, 11);
+    }
 
     public void Update()
     {
