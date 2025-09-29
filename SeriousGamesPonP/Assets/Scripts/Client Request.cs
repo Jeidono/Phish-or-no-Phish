@@ -17,7 +17,7 @@ public class ClientRequest : MonoBehaviour
     [SerializeField] private TMP_Text Location;
     [SerializeField] public GameObject ContentHolder;
 
-    private RectTransform ContCanv;
+    public RectTransform ContCanv;
     private BoxCollider2D BC;
     private RectTransform myCanv;
 

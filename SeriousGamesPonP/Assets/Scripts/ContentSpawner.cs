@@ -29,7 +29,7 @@ public class ContentSpawner : MonoBehaviour
         if (CR.Content) return;
         AssignPersonAndLocation();
 
-        int type = Random.Range(1, 3); //0 = audio, 1 = email, 2 = textdm
+        int type = Random.Range(1, 2); //0 = audio, 1 = email, 2 = textdm
         GameObject contentObj = null;
 
         switch (type)
@@ -69,10 +69,11 @@ public class ContentSpawner : MonoBehaviour
                 break;
         }
 
-        if (contentObj != null && CR.Content != null)
+        if (contentObj != null && CR.Content == null)
         {
-            contentObj.transform.SetParent(CR.Content.transform, false);
+            contentObj.transform.SetParent(CR.ContentHolder.transform, false);
             CR.Content = contentObj;
+            CR.ContCanv = contentObj.GetComponentInChildren<Canvas>().GetComponent<RectTransform>();
         }
 
     }
