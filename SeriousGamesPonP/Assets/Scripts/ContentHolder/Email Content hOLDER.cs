@@ -26,25 +26,25 @@ public class EmailContentHolder : MonoBehaviour
 
     void Update()
     {
-        if (database == null || database.emails == null || database.emails.Count == 0)
+        if (!database || database.emails == null || database.emails.Count == 0)
         {
             ClearUI();
             return;
         }
 
-        if (subjectText != null)
+        if (subjectText)
             subjectText.text = $"Subject: {Subject}";
 
-        if (fromText != null)
+        if (fromText)
             fromText.text = $"From: {From}";
 
-        if (toText != null)
+        if (toText)
             toText.text = $"To: {To}";
 
-        if (bodyText != null)
+        if (bodyText)
             bodyText.text = Body;
 
-        if (timestampText != null)
+        if (timestampText)
             timestampText.text = $"Date: {Timestamp}";
     }
 
