@@ -64,6 +64,66 @@ MonoBehaviour:
       delivery time here: [Reschedule Delivery]. Tracking ID: 9X-12345 Thanks, Customer
       Support"
     isPhishing: 1
+  - subject: "Your Account Has Been Locked \u2013 Immediate Action Required"
+    body: "We\u2019ve detected suspicious activity on your account. To ensure the
+      safety of your personal information, we\u2019ve temporarily locked your account.
+      Please click the link below to verify your identity and restore access to your
+      account.  [Verify My Identity]  Failure to do so within 24 hours will result
+      in permanent account suspension.  Sincerely, Account Security Team"
+    isPhishing: 1
+  - subject: "You\u2019ve Won a $500 Gift Card \u2013 Claim Your Prize Now!"
+    body: "Congratulations! You\u2019ve been selected to receive a $500 gift card.
+      All you need to do is provide your payment details so we can ship your prize
+      to you.  [Claim My Gift Card]  Hurry, this offer is limited and expires soon! 
+      Best regards, Gift Card Giveaway Team"
+    isPhishing: 1
+  - subject: Your Monthly Statement is Ready
+    body: Your monthly account statement is available for review. Please log into
+      your account using the link below to access your statement.  [Log In to View
+      Statement]  If you have any questions, feel free to contact customer support. 
+      Best regards,
+    isPhishing: 0
+  - subject: "Subject: Meeting Reminder \u2013 Tomorrow at 3 PM "
+    body: "This is a reminder of your meeting scheduled for tomorrow at 3 PM. Please
+      find the agenda attached for your reference.  Looking forward to discussing
+      the details.  Best regards, [Manager\u2019s Name]"
+    isPhishing: 0
+  - subject: 'Final Warning: Your Subscription Will Be Canceled!'
+    body: Your subscription to [Service Name] is about to be canceled. To avoid this,
+      click the link below to confirm your account information and prevent the cancellation. 
+      [Confirm My Subscription]  If you do not act now, your account will be permanently
+      closed.  Regards, Subscription Support Team
+    isPhishing: 1
+  - subject: "Action Required \u2013 Unusual Activity on Your Bank Account"
+    body: We have noticed unusual activity in your bank account and need you to verify
+      your account information to prevent any fraudulent transactions. Please follow
+      the link below to secure your account immediately.  [Secure My Account]  Failure
+      to do so will result in temporary suspension.  Sincerely,
+    isPhishing: 1
+  - subject: 'Reminder: Your Tax Filing Deadline Approaches'
+    body: "This is a reminder that your tax filing is due soon. You can submit your
+      documents through the online portal or schedule an appointment with our office
+      if you need assistance.  Please don\u2019t hesitate to reach out if you have
+      any questions.  Best regards, Tax Firm"
+    isPhishing: 0
+  - subject: New Feature Released on Your Account!
+    body: "We\u2019re excited to inform you that a new feature has been added to
+      your [App Name] account! Log in today to explore the latest updates and make
+      the most of these new tools.  [Explore New Features]  As always, thank you
+      for being a valued user.  Sincerely, support team"
+    isPhishing: 0
+  - subject: Your PayPal Account Has Been Suspended
+    body: Due to suspicious activity, your PayPal account has been temporarily suspended.
+      To restore your account, please verify your details by clicking the link below
+      and following the instructions.  [Restore My Account]  Failure to verify will
+      result in permanent account suspension.  Sincerely, PayPal Security Team
+    isPhishing: 1
+  - subject: "Your Upcoming Flight Confirmation \u2013 HM3582N"
+    body: 'Your flight with JETTY is confirmed! Below are your flight details:  Flight
+      Number: [Flight Number] Departure: [Date, Time] Arrival: [Destination]  Please
+      make sure to arrive at the airport at least 2 hours before departure. For any
+      changes, visit our website or contact our support team.  Safe travels!'
+    isPhishing: 0
   textMessages:
   - message: "Hey \u2014 this is IT. We noticed suspicious activity on your account.
       Click here to verify your identity now: [verify-account.link]. If you don\u2019t
