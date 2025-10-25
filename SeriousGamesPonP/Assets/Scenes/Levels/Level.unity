@@ -173,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5949625057530167147, guid: 7f522afba6fb66641b5293ba5fd40ebb, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949625057530167147, guid: 7f522afba6fb66641b5293ba5fd40ebb, type: 3}
       propertyPath: m_Color.g
@@ -181,11 +181,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5949625057530167147, guid: 7f522afba6fb66641b5293ba5fd40ebb, type: 3}
       propertyPath: m_Color.r
-      value: 0.20711446
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7577974993594254517, guid: 7f522afba6fb66641b5293ba5fd40ebb, type: 3}
       propertyPath: m_Name
       value: No Phish
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249378133333460207, guid: 7f522afba6fb66641b5293ba5fd40ebb, type: 3}
+      propertyPath: m_text
+      value: Not Phishing
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249378133333460207, guid: 7f522afba6fb66641b5293ba5fd40ebb, type: 3}
+      propertyPath: m_TextWrappingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249378133333460207, guid: 7f522afba6fb66641b5293ba5fd40ebb, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -240,17 +252,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5548400542473896217, guid: 7f522afba6fb66641b5293ba5fd40ebb, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9ecddd641cc53044b98ce52b86663c29, type: 2}
     - target: {fileID: 5635770521598983089, guid: 7f522afba6fb66641b5293ba5fd40ebb, type: 3}
       propertyPath: targetSceneName
       value: Phish
       objectReference: {fileID: 0}
     - target: {fileID: 5949625057530167147, guid: 7f522afba6fb66641b5293ba5fd40ebb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5471052391009641551, guid: 1152fe16f2f4af048a6c021b6b07533f, type: 3}
+    - target: {fileID: 5949625057530167147, guid: 7f522afba6fb66641b5293ba5fd40ebb, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949625057530167147, guid: 7f522afba6fb66641b5293ba5fd40ebb, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949625057530167147, guid: 7f522afba6fb66641b5293ba5fd40ebb, type: 3}
       propertyPath: m_Color.r
@@ -259,6 +279,10 @@ PrefabInstance:
     - target: {fileID: 7577974993594254517, guid: 7f522afba6fb66641b5293ba5fd40ebb, type: 3}
       propertyPath: m_Name
       value: Phish
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249378133333460207, guid: 7f522afba6fb66641b5293ba5fd40ebb, type: 3}
+      propertyPath: m_text
+      value: Phishing
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -573,6 +597,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6716842136970284342, guid: 475024654e777ed41ae47c2b8c7cbf63, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -14.400024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716842136970284342, guid: 475024654e777ed41ae47c2b8c7cbf63, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -69.900024
+      objectReference: {fileID: 0}
     - target: {fileID: 6942926421292910034, guid: 475024654e777ed41ae47c2b8c7cbf63, type: 3}
       propertyPath: m_Camera
       value: 
@@ -664,6 +696,14 @@ PrefabInstance:
     - target: {fileID: 7970424730849424735, guid: 475024654e777ed41ae47c2b8c7cbf63, type: 3}
       propertyPath: m_Name
       value: IGH
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107638945998973590, guid: 475024654e777ed41ae47c2b8c7cbf63, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5722293300093684040, guid: 249daf4c8d3ac8a4e85032ebf3c2b889, type: 3}
+    - target: {fileID: 9107638945998973590, guid: 475024654e777ed41ae47c2b8c7cbf63, type: 3}
+      propertyPath: m_Color.a
+      value: 0.4117647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

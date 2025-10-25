@@ -44,6 +44,7 @@ public class ClientRequest : MonoBehaviour
     private void OnMouseDrag()
     {
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + mouseOffset;
+        
     }
 
     private void OnMouseUp()

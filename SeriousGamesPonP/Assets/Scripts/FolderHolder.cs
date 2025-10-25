@@ -9,8 +9,11 @@ public class FolderHolder : MonoBehaviour
     public string targetSceneName;
     private int GetClicks=0;
     [SerializeField] private float sceneTransitionSensitivity=0.5f;
+    public Animator animator;
     public void LoadAndMoveObject(GameObject cr)
     {
+        animator.SetTrigger("Open");
+        animator.SetTrigger("Close");
         LoadSceneAndMoveObjectCoroutine(cr);
     }
 
@@ -18,6 +21,14 @@ public class FolderHolder : MonoBehaviour
     {
         if(!SceneManager.GetSceneByName(targetSceneName).isLoaded)
             StartCoroutine(onloadingScene(SceneManager.LoadSceneAsync(targetSceneName, LoadSceneMode.Additive)));
+        animator = gameObject.GetComponentInChildren<Animator>();
+    }
+
+    private void Awake()
+    {
+        GetClicks = 0;
+        animator = gameObject.GetComponentInChildren<Animator>();
+        animator.SetTrigger("Close");
     }
 
     IEnumerator onloadingScene(AsyncOperation async)
@@ -39,11 +50,13 @@ public class FolderHolder : MonoBehaviour
         // Wait until the scene is fully loaded
 
         // Get a reference to the newly loaded scene
+        GetClicks=0;
         Scene targetScene = SceneManager.GetSceneByName(targetSceneName);
         
         
         // Move the GameObject to the target scene
         SceneManager.MoveGameObjectToScene(objectToMove, targetScene);
+        
         objectToMove.SetActive(false);
         // Optionally, unload the previous scene if no longer needed
     }
@@ -54,6 +67,7 @@ public class FolderHolder : MonoBehaviour
         StartCoroutine(IMAREDUCECLICKS());
         if (GetClicks > 1)
         {
+            GetClicks=0;
             foreach (GameObject rootObj in SceneManager.GetActiveScene().GetRootGameObjects())
             {
                 rootObj.SetActive(false);
@@ -69,7 +83,11 @@ public class FolderHolder : MonoBehaviour
 
     IEnumerator IMAREDUCECLICKS()
     {
+        if(GetClicks==1)
+            animator.SetTrigger("Open");
         yield return new WaitForSeconds(sceneTransitionSensitivity);
         GetClicks--;
+        if(GetClicks == 0)
+            animator.SetTrigger("Close");
     }
 }

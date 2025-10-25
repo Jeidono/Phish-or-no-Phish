@@ -58,15 +58,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7372549}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -2565883555323872123, guid: 7b4c575e750438243be0832b5b9a9c44, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -417,8 +417,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 2045492094208909694, guid: c828fbe4527d12d4e9d534c151fd8560, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -447,6 +447,7 @@ MonoBehaviour:
   CHemail: {fileID: 962917048034306758, guid: 5c33fcf3a67f25b47ba7526b3eda3d4b, type: 3}
   CHdm: {fileID: 4487768639262800054, guid: b9b1b615e72441645869b7ea9cb1c258, type: 3}
   CHaudio: {fileID: 0}
+  Phishing: 0
 --- !u!1 &6734710844114045373
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,3 +828,4 @@ MonoBehaviour:
   Age: {fileID: 8344027726990648344}
   Location: {fileID: 5560700069449643652}
   ContentHolder: {fileID: 6383136448022007925}
+  ContCanv: {fileID: 0}
