@@ -1,8 +1,9 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
-public class ClientRequest : MonoBehaviour
+public class ClientRequest : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
 {
     public Sprite profilePic;
     public string clientName;
@@ -36,29 +37,6 @@ public class ClientRequest : MonoBehaviour
         BC.size = myCanv.rect.size;
     }
 
-    private void OnMouseDown()
-    {
-        mouseOffset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    }
-
-    private void OnMouseDrag()
-    {
-        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + mouseOffset;
-        
-    }
-
-    private void OnMouseUp()
-    {
-        Collider2D[] gettingFolder = Physics2D.OverlapCircleAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), 1);
-        foreach (Collider2D col in gettingFolder)
-        {
-            if (col.gameObject.GetComponent<FolderHolder>())
-            {
-                col.gameObject.GetComponent<FolderHolder>().LoadAndMoveObject(gameObject);
-                return;
-            }
-        }
-    }
 
     // Update is called once per frame
     void Update()
@@ -98,5 +76,29 @@ public class ClientRequest : MonoBehaviour
         }
         
         
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        eventData.selectedObject = gameObject;
+            mouseOffset = eventData.selectedObject.transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        eventData.selectedObject.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + mouseOffset;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+            Collider2D[] gettingFolder = Physics2D.OverlapCircleAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), 1);
+            foreach (Collider2D col in gettingFolder)
+            {
+                if (col.gameObject.GetComponent<FolderHolder>())
+                {
+                    col.gameObject.GetComponent<FolderHolder>().LoadAndMoveObject(gameObject);
+                    return;
+                }
+            }
     }
 }

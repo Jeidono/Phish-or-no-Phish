@@ -33,6 +33,8 @@ public class RequestSpawner : MonoBehaviour
         for (int i = 0; i < amount; i++)
         {
             GameObject RQthingy = Instantiate(requestTemplate, Vector3.zero, Quaternion.identity);
+            Canvas RQ = RQthingy.GetComponentInChildren<Canvas>();
+            RQ.GetComponent<RectTransform>().position=RQ.GetComponent<RectTransform>().position+Vector3.forward*i;
             ClientRequest CRthingy = RQthingy.GetComponent<ClientRequest>();
             int cfName = Random.Range(0, PB.FNames.Count);
             int clName = Random.Range(0, PB.LNames.Count);
