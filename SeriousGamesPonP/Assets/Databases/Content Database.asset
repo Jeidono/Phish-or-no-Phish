@@ -12,27 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9184aae795d506d4a916abd52411a6f1, type: 3}
   m_Name: Content Database
   m_EditorClassIdentifier: 
-  audioItems:
-  - clip: {fileID: 0}
-    description: 
-    duration: 0
-    isPhishing: 0
-  - clip: {fileID: 0}
-    description: 
-    duration: 0
-    isPhishing: 0
-  - clip: {fileID: 0}
-    description: 
-    duration: 0
-    isPhishing: 0
-  - clip: {fileID: 0}
-    description: 
-    duration: 0
-    isPhishing: 0
-  - clip: {fileID: 0}
-    description: 
-    duration: 0
-    isPhishing: 0
+  audioItems: []
   emails:
   - subject: Hi
     body: 'Our payroll system flagged an inconsistency in your account details that
@@ -142,4 +122,38 @@ MonoBehaviour:
     isPhishing: 0
   - message: "Urgent: I tried to send you a file but it bounced. Can you open this
       link and confirm your email so I can resend? [open-now.attn] \u2014 Jason"
+    isPhishing: 1
+  - message: "Hey, I\u2019ll be out of office next week so please handle any urgent
+      requests for me. Thanks!\u201D"
+    isPhishing: 0
+  - message: "\u201CQuick question: I noticed unusual activity on your account. Please
+      log in here to verify you\u2019re really you: [secure\u2011link.google\u2011account]
+      \u2014 Alex\u201D"
+    isPhishing: 1
+  - message: "\u201CGood morning! Just a reminder: team meeting at 10\u202Fam in
+      the conference room. See you there.\u201D"
+    isPhishing: 0
+  - message: "\u201CHey, it\u2019s the HR team. We need you to install this update
+      to avoid losing access to payroll: [download\u2011now.doc]\u201D"
+    isPhishing: 1
+  - message: ". \u201CHappy birthday! \U0001F389 Hope you have a fantastic day \u2014
+      let\u2019s grab coffee later this week.\u201D"
+    isPhishing: 0
+  - message: "\u201CCongratulations! You have been pre\u2011approved for a $1,000
+      refund. Click the link and fill the form: [refund\u2011portal.link] \u2014
+      Finance Dept\u201D"
+    isPhishing: 1
+  - message: "\u201CThe draft report is attached \u2013 please review and send me
+      your feedback by end of day.\u201D"
+    isPhishing: 0
+  - message: "\u201CURGENT: Your subscription has expired and all your files will
+      be deleted unless you re\u2011activate now: [re\u2011activate.account] \u2014
+      Support\u201D"
+    isPhishing: 1
+  - message: "\u201CReminder: your 1\u2011on\u20111 is scheduled for Thursday at
+      2\u202Fpm. Let me know if you need to reschedule.\u201D"
+    isPhishing: 0
+  - message: "\u201CHi, I just sent a big invoice to you but it bounced back. Could
+      you confirm your payment details with me here: [payment\u2011update.form] \u2014
+      Jamie\u201D"
     isPhishing: 1
